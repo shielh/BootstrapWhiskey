@@ -1,0 +1,46 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.alert-container {
+
+}
+
+.callout-container {
+    height: 100vh;
+    background: url('../images/whiskey-background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.quotes-container{
+
+}
+
+.features-container {
+
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.jumbotron-header {
+    color: #ffffff;
+}
+
+.jumbotron-text {
+    color: #ffffff;
+}
+
+.jumbotron-fineprint{
+    color: #000000;
+}

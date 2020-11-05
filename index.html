@@ -7,6 +7,9 @@
     <title>Whiskey Drop | Taste a new whiskey every month</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 
 <body>
@@ -23,7 +26,7 @@
                 <ul class="navbar-nav mr-auto"> <!--pushes nav content over to the left-->
                     <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li> <!--class as active makes it highlighted-->
                     <li class="nav-item mr-2"><a class="nav-link" href="/">About</li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item mr-2 dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Whiskeys
                     </a>
@@ -43,32 +46,37 @@
         </div>
         </div>
     </nav>
-    <article class="container mt-3"><!--mt-3 gives a top margin to our container and pushes content down a little-->
+
+<!--mt-3 gives a top margin to our container and pushes content down a little-->
+
+    <!--<div class="container alert-container"> 
         <div class="row d-none d-sm-block">
             <div class="col-12">
                 <div class="alert alert-warning"><strong>Sale Now On! </strong>We've got a sale on. Get a 12-month subscription for 6! 
                     <a href="">See here for details!</a>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- Callout -->
+        <div class="container-fluid callout-container"> <!--container-fluid makes image stretch across entire width of the screen-->
         <div class="row">
             <div class="col-12"><!--takes up entire width of the page-->
                 <section class="callout jumbotron text-center">
-                    <h1>The finest whiskeys delivered to your doorstep.</h1>
-                    <p class="lead">Sign up today to start receiving the world's best whiskeys every month. 
+                    <h1 class="jumbotron-header">The finest whiskeys delivered to your doorstep.</h1>
+                    <p class="lead jumbotron-text">Sign up today to start receiving the world's best whiskeys every month. 
                         <s class="d-none d-sm-inline">€19.99</s> <!--will only display 19.99 when screen size is small or above, not on mobile device-->
                         <span class="d-inline d-sm-none"><br></span>
                         <strong><mark>First one is free!</mark></strong></p>
                     <p><button class="btn btn-lg btn-success" data-toggle="modal" data-target="#signUpModal">Sign Up!</button></p>
-                    <p class="text-muted"><small>You must be over 18 to sign up to our service. Please drink responsibly.</small></p><!--text-muted makes font fainter-->
+                    <p class="text-muted jumbotron-fineprint"><small>You must be over 18 to sign up to our service. Please drink responsibly.</small></p><!--text-muted makes font fainter-->
                 </section>
             </div>
         </div>
         <!-- /.callout -->
-        <hr>
+        </div>
 
         <!-- Quotes -->
+        <div class="container quotes-container">
         <section class="quotes">
             <div class="row">
                 <div class="col-12 my-5"><!--my-5 class gives a little more vertical space making it look cleaner-->
@@ -104,9 +112,10 @@
             </div>
         </section>
         <!-- /.quotes -->
-        <hr>
+        </div>
 
         <!-- Features -->
+        <div class="container features-container">
         <section class="features">
             <div class="row">
                 <div class="col-12 my-5">
@@ -138,24 +147,37 @@
             </div>
         </section>
         <!-- /.features -->
-    </article>
+        </div>
+    
 
-<div class="modal" tabindex="-1" role="dialog" id="signUpModal">
+<div class="modal" tabindex="-1" role="dialog" id="signUpModal"> <!--Added signUpModal ID to link it with the signup button -->
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
+        <h5 class="modal-title">Sign Up To Whiskey Drop</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <label for="repeatPassword">Repeat Password</label>
+                <input type="password" class="form-control" id="repeatPassword" placeholder="Repeat Password" required>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+   
     </div>
   </div>
 </div>
