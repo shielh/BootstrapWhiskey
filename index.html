@@ -60,7 +60,7 @@
                         <s class="d-none d-sm-inline">€19.99</s> <!--will only display 19.99 when screen size is small or above, not on mobile device-->
                         <span class="d-inline d-sm-none"><br></span>
                         <strong><mark>First one is free!</mark></strong></p>
-                    <p><button class="btn btn-lg btn-success">Sign Up!</button></p>
+                    <p><button class="btn btn-lg btn-success" data-toggle="modal" data-target="#signUpModal">Sign Up!</button></p>
                     <p class="text-muted"><small>You must be over 18 to sign up to our service. Please drink responsibly.</small></p><!--text-muted makes font fainter-->
                 </section>
             </div>
@@ -139,6 +139,26 @@
         </section>
         <!-- /.features -->
     </article>
+
+<div class="modal" tabindex="-1" role="dialog" id="signUpModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!--Scripts placed at bottom because when browser opens, it interprets HTML from the top to bottom. and we want CSS loaded ASAP so the user doesn't see an unstyled page.
     Java at the end incase it holds up HTML or CSS-->
