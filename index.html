@@ -12,14 +12,35 @@
 <body>
     <nav class="navbar navbar-light bg-light navbar-expand-sm">
         <a href="/" class="navbar-brand">Whiskey Drop</a>
-        <ul class="navbar-nav mr-auto"> <!--pushes nav content over to the left-->
-            <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</li> <!--class as active makes it highlighted-->
-            <li class="nav-item mr-2"><a class="nav-link" href="/">About</li>
-            <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Sign In / Sign up</li> <!--Adding signin to navbar for mobile view-->
-        </ul>
+
+        <button class="navbar-toggler ml-auto"  type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" 
+                aria-label="Toggle navigation"> <!--ml-auto pushes to the right. data-toggle tells Bootstrap this button is trigger for collapsible element. data-target gives ID of collapsible element. aria=accessible rich internet applications-->
+        <span class="navbar-toggler-icon"></span> <!--provides the three bar icon for the button-->
+        </button>
+
+        <div class="collapse nabvar-collapse" id="navbarNavDropdown"> <!--ID matches data-target in button above-->
+    
+            <ul class="navbar-nav mr-auto"> <!--pushes nav content over to the left-->
+                <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</li> <!--class as active makes it highlighted-->
+                <li class="nav-item mr-2"><a class="nav-link" href="/">About</li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Whiskeys
+                    </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Irish</a>
+                            <a class="dropdown-item" href="#">Scotch</a>
+                            <a class="dropdown-item" href="#">Japanese</a>
+                            <a class="dropdown-item" href="#">American</a>
+                        </div>
+                </li>
+
+                <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Sign In / Sign up</li> <!--Adding signin to navbar for mobile view-->
+            </ul>
         <div class="d-none d-md-block">
             <p class="navbar-text my-auto mr-2"><i>Great whiskey delivered to your door!</i></p>
             <a href="/login">Sign In / Sign Up</a>
+        </div>
         </div>
     </nav>
     <article class="container mt-3"><!--mt-3 gives a top margin to our container and pushes content down a little-->
@@ -118,6 +139,9 @@
         </section>
         <!-- /.features -->
     </article>
+
+    <!--Scripts placed at bottom because when browser opens, it interprets HTML from the top to bottom. and we want CSS loaded ASAP so the user doesn't see an unstyled page.
+    Java at the end incase it holds up HTML or CSS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
